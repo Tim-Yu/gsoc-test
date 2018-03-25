@@ -1,0 +1,26 @@
+---
+title: "karyoploteR"
+author: "Boyu Yu"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(karyoploteR)
+library(GenomicRanges)
+```
+
+```{r}
+gr <- GRanges(seqnames = c("chr2", "chr17"),
+              IRanges(start = c(34294, 43125400), end = c(1254820, 53125482)))
+gr
+kp <- plotKaryotype(genome = "hg38")
+kpPlotRegions(kp, gr, col = "purple")
+```
+

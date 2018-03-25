@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://eweitz.github.io/ideogram/dist/js/ideogram.min.js"></script>
+</head>
+
+
+
+<h3>Example 1</h3>
+
+<p>This example is same with the one produced in R.</p>
+
+<div id="example1"></div>
+
+<script>
+
+ var config1 = {
+     container: "#example1",
+     organism: 'human',
+     orientation: 'horizontal',
+     annotations: [
+         {
+             "chr": "2",
+             "start": 34294,
+             "stop": 125482
+         },
+         {
+             "chr": "17",
+             "start": 43125400,
+             "stop": 43125482
+         }
+     ]
+ };
+
+ var ideogram1 = new Ideogram(config1);
+
+</script>
+
+
+
+<h3>Example 2</h3>
+
+<div id="example2"></div>
+
+<script>
+ var config2 = {
+     container: "#example2",
+     organism: "human",
+     chromosome: "7",
+     orientation: "horizontal",
+     annotations: [
+         {
+             "chr": "7",
+             "start": 199999,
+             "stop": 3000000
+         },
+         {
+             "chr": "7",
+             "start": 6000000,
+             "stop": 9000000
+         }
+     ],
+     "annotationsLayout": "overlay"
+ };
+
+ var ideogram2 = new Ideogram(config2);
+
+</script>
+
+
+</html>
